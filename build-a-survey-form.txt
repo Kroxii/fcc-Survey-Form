@@ -1,5 +1,3 @@
-** start of undefined **
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,86 +7,102 @@
     <title>Survey Form</title>
 </head>
 <body>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">Please fill out the form below:</p>
-    
     <form id="survey-form">
-        <label id="name-label" for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Remplissez le formulaire :</p>
+        
+        <label id="name-label" for="name">Nom:</label>
+        <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+
+        <label id="name-label" for="name">Prénom :</label>
+        <input type="text" id="name" name="name" placeholder="Entrez votre prénom" required>
         
         <label id="email-label" for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
         
-        <label id="number-label" for="number">Age:</label>
-        <input type="number" id="number" name="number" min="1" max="120" placeholder="Enter your age" required>
+        <label id="number-label" for="number">Votre âge:</label>
+        <input type="number" id="number" name="number" min="1" max="120" placeholder="Entrez votre âge" required>
         
-        <label for="dropdown">Select your favorite fruit:</label>
+        <label for="dropdown">Quelle situation ?</label>
         <select id="dropdown" name="dropdown">
-            <option value="apple">Apple</option>
-            <option value="banana">Banana</option>
+            <option value="apple">Sans emploi</option>
+            <option value="banana">Employé CDI</option>
+            <option value="banana">Employé CDD</option>
+            <option value="banana">Employé Intérim</option>
         </select>
         
-        <p>Gender:</p>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label>
+        <p>Genre :</p>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Homme</label>
         <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label>
+        <label for="female">Femme</label>
         
-        <p>Hobbies:</p>
+        <p>Vos Hobbies :</p>
         <input type="checkbox" id="reading" name="hobbies" value="reading">
-        <label for="reading">Reading</label>
+        <label for="reading">Lire</label>
         <input type="checkbox" id="traveling" name="hobbies" value="traveling">
-        <label for="traveling">Traveling</label>
+        <label for="traveling">Voyager</label>
         
-        <label for="comments">Additional Comments:</label>
-        <textarea id="comments" name="comments" placeholder="Enter your comments here"></textarea>
+        <label for="comments">Autre :</label>
+        <textarea id="comments" name="comments" placeholder="Mettez vos commentaires ici"></textarea>
         
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" id="submit">Envoyer</button>
     </form>
 </body>
 </html>
 
-** end of undefined **
-
-** start of undefined **
-
 body {
-    background-color: #cccccc;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #90bae4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#survey-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
 }
 
 h1 {
     text-align: center;
-    color: #000000;
+    color: #343a40;
+    margin-bottom: 20px;
+    font-size: 2em; /* Adjust the font size as needed */
 }
 
 p {
     text-align: center;
-    color: #000000;
+    color: #6c757d;
+    margin-bottom: 30px;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid hsl(38, 87%, 52%);
-    border-radius: 10px;
-    background-color: hsl(49, 87%, 52%);
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057;
+    font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="password"],
 input[type="number"],
-textarea,
-select {
+select,
+textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid hsl(49, 0%, 0%);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: #cacaca;
+    font-size: 16px;
 }
 
 input[type="radio"],
@@ -96,32 +110,18 @@ input[type="checkbox"] {
     margin-right: 10px;
 }
 
-button[type="submit"] {
+button {
     width: 100%;
-    padding: 10px;
-    background-color: #000000;
-    color: white;
+    padding: 12px;
+    background-color: #007bff;
     border: none;
     border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
-    background-color: #000000;
+button:hover {
+    background-color: #0056b3;
 }
-
-label {
-    margin-bottom: 5px;
-    display: block;
-    font-weight: bold;
-    color: #000000;
-}
-
-h2 {
-    text-align: center;
-    color: #333;
-}
-
-
-** end of undefined **
-

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <form id="survey-form">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Remplissez le formulaire :</p>
+        
+        <label id="name-label" for="name">Nom:</label>
+        <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+
+        <label id="name-label" for="name">Prénom :</label>
+        <input type="text" id="name" name="name" placeholder="Entrez votre prénom" required>
+        
+        <label id="email-label" for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+        
+        <label id="number-label" for="number">Votre âge:</label>
+        <input type="number" id="number" name="number" min="1" max="120" placeholder="Entrez votre âge" required>
+        
+        <label for="dropdown">Quelle situation ?</label>
+        <select id="dropdown" name="dropdown">
+            <option value="apple">Sans emploi</option>
+            <option value="banana">Employé CDI</option>
+            <option value="banana">Employé CDD</option>
+            <option value="banana">Employé Intérim</option>
+        </select>
+        
+        <p>Genre :</p>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Homme</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Femme</label>
+        
+        <p>Vos Hobbies :</p>
+        <input type="checkbox" id="reading" name="hobbies" value="reading">
+        <label for="reading">Lire</label>
+        <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+        <label for="traveling">Voyager</label>
+        
+        <label for="comments">Autre :</label>
+        <textarea id="comments" name="comments" placeholder="Mettez vos commentaires ici"></textarea>
+        
+        <button type="submit" id="submit">Envoyer</button>
+    </form>
+</body>
+</html>
